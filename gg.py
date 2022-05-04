@@ -43,3 +43,5 @@ with open('data.txt', 'a') as f:
         if re.search(r'\bcannot\b', line):
             f.writelines(str(line))
             f.write('\n')
+
+print("mine craft ")
