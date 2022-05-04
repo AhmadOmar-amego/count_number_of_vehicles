@@ -28,6 +28,7 @@
 # print(hehe)
 import re
 import urllib.request
+
 # response = urllib.request.urlopen("http://www.gutenberg.org/files/10/10-0.txt")
 # print(response)
 # lines = response.readlines()
@@ -36,9 +37,9 @@ page = urllib.request.urlopen("http://www.gutenberg.org/files/10/10-0.txt").read
 text_list = page.decode('utf-8').split('\n')
 print(text_list)
 with open('data.txt', 'a') as f:
-#     print()
+    #     print()
     for line in text_list:
-    #     print(line)
+        #     print(line)
         if re.search(r'\bcannot\b', line):
             f.writelines(str(line))
             f.write('\n')
